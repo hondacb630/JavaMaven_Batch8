@@ -31,8 +31,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Run tests and upload reports
-      run: |
-        mvn test
+      run:  mvn test --file pom.xml # Run our tests using Maven
       continue-on-error: true
 
     - name: Upload test report
